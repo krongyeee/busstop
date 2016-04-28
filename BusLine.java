@@ -81,7 +81,7 @@ public class BusLine extends Activity {
         Button button7 = (Button) findViewById(R.id.btnLine_7);
         Button button8 = (Button) findViewById(R.id.btnLine_8);
         final ImageView img_bus = (ImageView) findViewById(R.id.img_bus);
-        final ListView listviewIn = (ListView) findViewById(R.id.listviewIn);
+
 
 
         //assert listview != null;
@@ -109,14 +109,13 @@ public class BusLine extends Activity {
                 );
 
                 listViewIn.setAdapter(adapter); */
-                Button btnIn = (Button) findViewById(R.id.btnIn);
 
-
-
+                    Button btnIn =(Button)dialog.findViewById(R.id.btnIn);
                 btnIn.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
+                        ListView listviewIn = (ListView) findViewById(R.id.listviewIn);
 
                         ArrayAdapter<String> adapter = new ArrayAdapter<String>(BusLine.this,android.R.layout.simple_list_item_1,DataIn );
 
@@ -128,6 +127,9 @@ public class BusLine extends Activity {
                     }
                 });
 
+
+
+
                 dialog.show();
 
 
@@ -136,6 +138,8 @@ public class BusLine extends Activity {
 
             }
         });
+
+
         buttonPor.setOnClickListener(new View.OnClickListener() {
 
             @Override
